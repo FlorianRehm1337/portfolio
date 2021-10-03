@@ -22,12 +22,13 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 320px;
-    max-width: 350px;
+    max-width: 600px;
     margin-bottom: 64px;
 
     h1{
         border-bottom: 2px solid rgb(45, 252, 216);
         max-width: 150px;
+        margin: 0;
     }
 }
 
@@ -40,9 +41,11 @@
 
 .journey-container{
     display: flex;
+    padding-left: 120px;
+    padding-right: 120px;
     justify-content: space-evenly;
-    width: 100%;
-    padding-top: 100px;
+    max-width: 100%;
+    padding-top: 64px;
 }
 
 .journey{
@@ -52,6 +55,11 @@
     max-width: 300px;
     text-align: center;
 
+    h3{
+        font-size: 25px;
+        margin-top: 32px;
+        margin-bottom: 5px;
+    }
 }
 
 .journey-img-container{
