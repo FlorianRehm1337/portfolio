@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
+kochwelt_bg = '/assets/img/project-kochwelt.jpg'
   constructor() { }
 
   ngOnInit(): void {
