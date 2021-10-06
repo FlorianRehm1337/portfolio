@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'florehm1337@gmail.com';
-$redirect = 'src/app/success/success.component.html';
+$redirect = 'success.html';
 
 ########### CONFIG END ###########
 
@@ -40,7 +40,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Access-Control-Allow-Origin: *");
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@developerakademie.com";
+        $headers = "From: " . $_POST['email'];
 
         mail($recipient, $subject, $_POST['message'], $headers);
         header("Location: " . $redirect); 
