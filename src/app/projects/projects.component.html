@@ -1,12 +1,12 @@
-<div class="my-projects-container">
+<div id="projects" class="my-projects-container">
     <h1>Meine Projekte</h1>
     <div class="btn-container">
-        <button disabled>Alle</button>
-        <button>Angular</button>
-        <button>Javascript</button>
+        <button (click)="showAll" [class.button-disabled]="buttonAll">Alle</button>
+        <button (click)="showAngular()" [class.button-active]="buttonAng"> Angular</button>
+        <button (click)="showJS()" [class.button-active]="buttonJS">Javascript</button>
     </div>
-    <div class="projects-container">
-        <div class="project">
+    <div  class="projects-container">
+        <div id="kochwelt" class="project">
             <div>
                 <h2>Kochwelt</h2>
                 <p>Javascript - Rezeptseite</p>
@@ -14,7 +14,7 @@
             </div>
             <img src="/assets/img/project-kochwelt.jpg">
         </div>
-        <div class="project">
+        <div id="lieferando" class="project">
             <div>
                 <h2>Lieferando</h2>
                 <p>Javascript - Lieferando Nachbau</p>
@@ -22,7 +22,7 @@
             </div>
             <img src="/assets/img/project-lieferando.jpg">
         </div>
-        <div class="project">
+        <div id="quizapp" class="project">
             <div>
                 <h2>Quiz-App</h2>
                 <p>Javascript - ein kleines Quiz</p>
@@ -30,7 +30,7 @@
             </div>
             <img src="/assets/img/project-quizapp.jpg">
         </div>
-        <div class="project">
+        <div id="join" class="project">
             <div>
                 <h2>Join</h2>
                 <p>Javascript - Kanban Gruppenarbeit</p>
@@ -38,7 +38,7 @@
             </div>
             <img src="/assets/img/project-join.jpg">
         </div>
-        <div class="project">
+        <div id="portfolio" class="project">
             <div>
                 <h2>Portfolio</h2>
                 <p>Angular - Meine Homepage</p>
@@ -46,7 +46,7 @@
             </div>
             <img src="/assets/img/project-portfolio.jpg">
         </div>
-        <div class="project">
+        <div id="cardgame" class="project">
             <div>
                 <h2>Ring Of Fire</h2>
                 <p>Angular - Kartenspiel</p>

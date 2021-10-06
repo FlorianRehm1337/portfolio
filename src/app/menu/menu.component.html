@@ -1,9 +1,24 @@
 <div class="navbar">
-    <img src="./assets/img/logo-white.png">
+    <a href="#greeting"><img class="logo-white" src="./assets/img/logo-white.png"></a>
     <div class="link-container">
-        <a href="#">Home</a>
-        <a href="#">Meine Skills</a>
-        <a href="#">Meine Projekte</a>
-        <a href="#">Über mich</a>
+        <a href="#greeting">Home</a>
+        <a href="#myskills">Meine Skills</a>
+        <a href="#projects">Meine Projekte</a>
+        <a href="#aboutme">Über mich</a>
+    </div>
+    <img (click)="openMenu()" class="responsive-icon" src="/assets/img/responsive.png">
+
+    <div [class.resmenuopened]="menuopened" class="responsive-menu">
+        <img (click)="closeMenu()" class="responsive-close" src="/assets/img/responsive-close.png">
+        <div class="responsive-link-container">
+            <a (click)="closeMenu()" href="#greeting">Home</a>
+            <a (click)="closeMenu()" href="#myskills">Meine Skills</a>
+            <a (click)="closeMenu()" href="#projects">Meine Projekte</a>
+            <a (click)="closeMenu()" href="#aboutme">Über mich</a>
+        </div>
+        <div class="responsive-under-overlay">
+
+        </div>
+
     </div>
 </div>

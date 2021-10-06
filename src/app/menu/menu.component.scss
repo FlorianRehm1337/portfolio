@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     position: absolute;
     left: 0;
     right: 0;
@@ -10,28 +10,134 @@
     width: 100vw;
     max-width: 100%;
 
-    img{
+    img {
         height: 64px;
         width: 75px;
         padding-left: 190px;
         padding-top: 32px;
         cursor: pointer;
     }
-
 }
 
-.link-container{
+.link-container {
     padding-right: 200px;
 
-    a{
+    a {
         color: white;
         text-decoration: none;
         padding-left: 32px;
         padding-right: 32px;
         font-size: 20px;
 
-        &:hover{
+        &:hover {
             color: orange;
         }
     }
 }
+
+.responsive-icon {
+    display: none;
+}
+
+.responsive-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .link-container {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .logo-white {
+        height: 45px;
+        width: 50px;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        margin-left: 16px !important;
+        margin-top: 16px !important;
+    }
+
+    .responsive-icon {
+        width: 32px !important;
+        height: 32px !important;
+        display: unset;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        margin-top: 32px;
+        margin-right: 32px;
+        margin-bottom: 32px;
+    }
+
+    .responsive-menu {
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 1;
+        transform: translateX(100%);
+        transition: all 225ms ease-in-out;
+
+        a{
+            color: orange;
+            margin: 32px;
+            box-shadow: 0px 0px 25px 0px orange;
+            background-color: transparent;
+        }
+        
+    }
+
+    .responsive-link-container{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50vh;
+        background-color: black;
+        box-shadow: 30px 10px 15px 0px orange;
+        z-index: 3;
+    }
+
+    .responsive-under-overlay{
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .responsive-close{
+        position: absolute;
+        top: 0;
+        padding-left: 0!important;
+        padding-top: 0!important;
+        margin-top: 16px;
+        margin-right: 16px;
+        right: 0;
+        filter: invert(1);
+        z-index: 1;
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .resmenuopened{
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 225ms ease-in-out;
+    }
+}
+
+

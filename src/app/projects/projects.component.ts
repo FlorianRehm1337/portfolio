@@ -6,10 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-kochwelt_bg = '/assets/img/project-kochwelt.jpg'
+
+  buttonAll = false;
+  buttonAng = false;
+  buttonJS = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.buttonAll = true;
+    this.buttonAng = false;
+    this.buttonJS = false;
+  }
+
+  showAll(){
+    
+  }
+
+  showAngular(){
+
+  }
+
+  showJS(){
+
   }
 
 }
