@@ -1,34 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
 
-  buttonAll = false;
-  buttonAng = false;
-  buttonJS = false;
+  btnAll = true;
+  btnAng = false;
+  btnJS = false;
+  status: any;
+  JS = true;
+  Angular = true;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.buttonAll = true;
-    this.buttonAng = false;
-    this.buttonJS = false;
+  showAll() {
+    this.JS = true;
+    this.Angular = true;
+    this.btnAng = false;
+    this.btnJS = false;
+    this.btnAll = true;
   }
 
-  showAll(){
-    
+  showAngular() {
+    this.Angular = true;
+    this.JS = false;
+    this.btnAng = true;
+    this.btnJS = false;
+    this.btnAll = false;
   }
 
-  showAngular(){
-
-  }
-
-  showJS(){
-
+  showJS() {
+    this.JS = true;
+    this.Angular = false;
+    this.btnAng = false;
+    this.btnJS = true;
+    this.btnAll = false;
   }
 
 }
