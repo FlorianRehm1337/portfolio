@@ -21,6 +21,7 @@
 .footer-logo {
     height: 90px;
     width: 100px;
+
 }
 
 .link-container {
@@ -39,14 +40,14 @@
         margin-left: 16px;
         margin-right: 16px;
         cursor: pointer;
+
+        &:hover{
+            opacity: 0.75;
+        }
     }
 }
 
 @media (max-width: 800px) {
-
-    .footer-container{
-        
-    }
 
     .footer-logo {
         height: 45px;

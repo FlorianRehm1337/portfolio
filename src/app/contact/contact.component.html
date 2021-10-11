@@ -7,18 +7,20 @@
     
         <form #form target="_blank" action="http://florian-rehm.developerakademie.com/send_mail.php" method="POST">
             <p>Name</p>
-            <input name="name" placeholder="Enter your name">
+            <input name="name" #name placeholder="Enter your name">
     
             <p>Email Adresse</p>
-            <input name="email" placeholder="Enter your Email address" required>
+            <input name="email" #email placeholder="Enter your Email address" required>
     
             <p>Ihre Nachricht</p>
-            <textarea name="message" placeholder="Enter your message"></textarea>
+            <textarea name="message" #message placeholder="Enter your message"></textarea>
         </form>
     
         <div class="btn-container">
-            <button (click)="form.submit()" type="submit">Senden</button>
+            <button (click)="form.submit(); clearInput()" type="submit">Senden</button>
         </div>
         
     </div>
 </div>
+
+<!-- name.value=' ' ; email.value = ' ' ; message.value = ' ' -->
