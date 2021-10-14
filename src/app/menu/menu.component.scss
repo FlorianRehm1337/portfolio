@@ -9,6 +9,7 @@
     align-items: center;
     width: 100vw;
     max-width: 100%;
+    height: 100px;
 
     img {
         height: 64px;
@@ -16,6 +17,7 @@
         padding-left: 190px;
         padding-top: 32px;
         cursor: pointer;
+        
     }
 }
 
@@ -80,22 +82,19 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
-        opacity: 1;
-        transform: translateX(100%);
-        transition: all 225ms ease-in-out;
+        z-index: -1;
+        opacity: 0;
+        transition: all 500ms ease-in-out;
 
-        a{
+        a {
             color: orange;
             margin: 32px;
             box-shadow: 0px 0px 25px 0px orange;
             background-color: transparent;
         }
-        
     }
 
-    .responsive-link-container{
-        
+    .responsive-link-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,21 +102,21 @@
         width: 100%;
         height: 50vh;
         background-color: black;
-        box-shadow: 30px 10px 15px 0px orange;
         z-index: 3;
     }
 
-    .responsive-under-overlay{
+    .responsive-under-overlay {
         width: 100%;
         height: 50vh;
         background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0px -10px 10px -10px orange;
     }
 
-    .responsive-close{
+    .responsive-close {
         position: absolute;
         top: 0;
-        padding-left: 0!important;
-        padding-top: 0!important;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
         margin-top: 16px;
         margin-right: 16px;
         right: 0;
@@ -127,7 +126,7 @@
         height: 16px !important;
     }
 
-    .resmenuopened{
+    .resmenuopened {
         display: unset;
         position: absolute;
         top: 0;
@@ -135,9 +134,29 @@
         right: 0;
         z-index: 2;
         opacity: 1;
-        transform: translateX(0);
-        transition: all 225ms ease-in-out;
+        animation: showRespmenu;
+        transition: all 500ms ease-in-out;
+    }
+
+    @keyframes showRespmenu{
+
+        from{
+            opacity: 0;
+        }
+
+        to{
+            opacity: 1;
+        }
+    }
+
+    @keyframes closeRespmenu{
+
+        from{
+            opacity: 1;
+        }
+
+        to{
+            opacity: 0;
+        }
     }
 }
-
-

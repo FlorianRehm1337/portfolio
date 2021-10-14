@@ -147,6 +147,8 @@
     .projects-container {
         flex-direction: column;
         width: auto;
+        margin-top: 32px;
+        margin-bottom: 32px;
 
         img {
             margin-left: 0;
@@ -158,6 +160,15 @@
 
         div {
             max-width: 100%;
+            width: 300px;
+            height: 300px;
+            margin-top: 32px;
+            margin-bottom: 32px;
         }
+    }
+
+    button {
+        min-width: 100px !important;
+        min-height: 50px !important;
     }
 }

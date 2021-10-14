@@ -50,6 +50,7 @@
 @media (max-width: 800px) {
 
     .footer-logo {
+        display: none;
         height: 45px;
         width: 50px;
         padding-bottom: 16px;
@@ -61,20 +62,19 @@
         max-width: 300px;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
        
 
         img{
-            width: 32px;
-            height: 32px;
+            max-width: 30px;
+            max-height: 30px;
             padding-top: 12px;
             padding-bottom: 12px;
-            
+            padding: 0;
         }
     }
 
     .link-container{
-        margin-right: 16px;
+        margin-right: 32px;
     }
 }

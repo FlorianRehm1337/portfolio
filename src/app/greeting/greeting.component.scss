@@ -154,6 +154,7 @@
         align-items: center;
         max-width: 100%;
         overflow-x: hidden;
+        margin-top: 100px;
 
         h1 {
             font-size: 32px;
@@ -201,9 +202,7 @@
 
         p{
             padding-left: 35px;
-        }
-        
-        
+        }  
     }
 
     .firstname {
@@ -218,7 +217,7 @@
         position: unset;
         height: 300px;
         width: 300px;
-        margin-top: 150px;
+        margin-top: 64px;
     }
 
     .arrow-container {
