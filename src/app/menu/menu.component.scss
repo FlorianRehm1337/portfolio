@@ -14,7 +14,7 @@
     img {
         height: 64px;
         width: 75px;
-        padding-left: 190px;
+        padding-left: 200px;
         padding-top: 32px;
         cursor: pointer;
         
@@ -27,8 +27,8 @@
     a {
         color: white;
         text-decoration: none;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
         font-size: 20px;
 
         &:hover {
@@ -45,7 +45,7 @@
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .link-container {
         display: none;
     }
