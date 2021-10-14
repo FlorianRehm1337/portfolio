@@ -6,7 +6,6 @@
     max-width: 100%;
 
     h1 {
-       // width: 45ch;
         font-size: 64px;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -105,7 +104,6 @@
     height: 32px;
     width: 32px;
     cursor: pointer;
-    
 }
 
 @keyframes typing {
@@ -120,29 +118,38 @@
     }
 }
 
-@keyframes fadeIn{
-    from{
+@keyframes fadeIn {
+    from {
         transform: scale(0);
     }
-    to{
+    to {
         transform: scale(1);
     }
 }
 
-@keyframes moveArrow{
-    from{
-        transform: translateY(20px)
+@keyframes moveArrow {
+    from {
+        transform: translateY(20px);
     }
-    to{
+    to {
         transform: translateY(0);
     }
 }
 
-@keyframes highlightButton{
-    from{
+@keyframes highlightButton {
+    from {
         transform: scale(1.3);
     }
-    to{
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlightButtonMobile {
+    from {
+        transform: scale(1.1);
+    }
+    to {
         transform: scale(1);
     }
 }
@@ -154,7 +161,6 @@
         align-items: center;
         max-width: 100%;
         overflow-x: hidden;
-        margin-top: 100px;
 
         h1 {
             font-size: 32px;
@@ -174,6 +180,9 @@
         padding-left: 64px;
         padding-right: 64px;
         font-size: 20px;
+        animation: highlightButtonMobile 3s ease-in-out;
+        animation-iteration-count: 2;
+        animation-direction: alternate-reverse;
 
         &:hover {
             background-color: #2dfcd8;
@@ -196,13 +205,14 @@
         justify-content: center;
         max-width: 100%;
 
-        h1{
+        h1 {
             max-width: 100%;
         }
 
-        p{
+        p {
             padding-left: 35px;
-        }  
+            font-size: 25px;
+        }
     }
 
     .firstname {
@@ -215,9 +225,9 @@
 
     .my-image {
         position: unset;
-        height: 300px;
-        width: 300px;
-        margin-top: 64px;
+        height: 250px;
+        width: 250px;
+        margin-top: 125px;
     }
 
     .arrow-container {
