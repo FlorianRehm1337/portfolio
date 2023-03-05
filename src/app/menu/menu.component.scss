@@ -1,0 +1,182 @@
+.page-wrapper {
+  display: flex;
+  animation: zoomIn 1s;
+  background-color: #242424;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  min-width: 250px;
+  padding: 32px;
+  background-color: rgb(17, 20, 24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  font-size: 21px;
+
+  a {
+    color: white;
+    font-weight: 400;
+    text-shadow: 3px 3px black;
+
+    &:hover {
+      color: #008f64;
+      text-shadow: 3px 3px black;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.nav-img {
+  border-radius: 100%;
+  border: 5px solid gray;
+  width: 180px;
+  height: 190px;
+
+  img {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: 90% 50%;
+  }
+}
+
+.my-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--green);
+  margin-top: 12px;
+  text-shadow: 3px 3px black;
+}
+
+.imprint-data-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  a {
+    font-size: 21px;
+    color: white;
+    font-weight: 400;
+    text-shadow: 3px 3px black;
+
+    &:hover {
+      color: #008f64;
+      text-shadow: 3px 3px black;
+    }
+  }
+}
+
+.social-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.bottom-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    &:hover {
+      filter: invert(50%) sepia(79%) saturate(435%) hue-rotate(107deg) brightness(85%) contrast(90%);
+    }
+  }
+}
+
+.resp-menu {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+.hightlighted-link {
+  color: var(--green) !important;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 900px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 24px 16px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(17, 20, 24);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .resp-menu {
+    z-index: 5;
+    display: unset;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 42px;
+    filter: invert(67%) sepia(79%) saturate(435%) hue-rotate(107deg) brightness(85%) contrast(90%);
+    opacity: 0.6;
+  }
+
+  .close-menu {
+    display: unset;
+    position: absolute;
+    filter: invert(40%) sepia(79%) saturate(435%) hue-rotate(107deg) brightness(85%) contrast(90%);
+
+    top: 24px;
+    right: 24px;
+    width: 42px;
+    opacity: 0.6;
+  }
+
+  .logo {
+    top: 24px;
+    left: 24px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    scale: 0.0;
+  }
+  to{
+    scale: 1.0;
+  }
+}

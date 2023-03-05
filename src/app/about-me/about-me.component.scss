@@ -1,0 +1,145 @@
+section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: calc(100vw - 250px);
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px;
+  z-index: 1;
+  position: relative;
+
+  button {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 21px;
+    border: 2px solid var(--green);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: rgb(26, 26, 26);
+      border: 2px solid transparent;
+      background-color: var(--green);
+    }
+  }
+}
+
+.watermark {
+  position: fixed;
+  right: 50px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.1;
+  width: 800px;
+}
+
+.info-start {
+  max-width: 1000px;
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--green);
+    max-width: fit-content;
+    padding: 0px 16px 8px 0px;
+    text-shadow: 5px 5px black;
+  }
+
+  h4 {
+    font-size: 32px;
+    margin: 32px 0;
+    text-shadow: 3px 3px black;
+  }
+
+  p {
+    font-size: 21px;
+  }
+}
+
+.info-wrapper {
+  display: flex;
+  margin: 32px 0 64px 0;
+  gap: 64px;
+}
+
+.info-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 21px;
+  div {
+    display: flex;
+
+    p {
+      color: var(--green);
+      min-width: 100px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  section {
+    padding-bottom: 64px;
+  }
+  .watermark {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1100px) {
+  section {
+    padding: 64px;
+  }
+  .info-start {
+    h1 {
+      font-size: 42px;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+  }
+
+  .info-stack {
+    font-size: 16px;
+  }
+
+  .watermark {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    max-width: unset;
+    padding: 32px;
+  }
+
+  .info-wrapper {
+    gap: 16px;
+    margin: 32px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .watermark {
+    width: 300px;
+    right: 0;
+    bottom: 64px;
+  }
+}

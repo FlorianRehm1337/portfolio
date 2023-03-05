@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+  <nav [@sideMenu]="menuState">
+    <img class="logo" src="assets/img/favicon_green.png" alt="logo.png">
+    <img (click)="toggleNav()" class="close-menu" src="assets/img/close_menu.svg" alt="close_menu.svg">
+    <div>
+      <div class="nav-img">
+        <img src="assets/img/nav_img.png" alt="nav_img.png">
+      </div>
+      <p class="my-name">Florian Rehm</p>
+    </div>
+    <div class="nav-links">
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/home">Home</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/about">About</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/projects">Projects</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/contact">Contact</a>
+    </div>
+    <div class="bottom-links">
+      <div class="imprint-data-wrapper">
+        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/imprint">Imprint</a>
+        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/data-protection">Data-Protection</a>
+      </div>
+      <div class="social-wrapper">
+        <a target="_blank" href="https://www.xing.com/profile/Florian_Rehm22/cv">
+          <img src="assets/img/xing.svg" alt="xing.svg">
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/florian-rehm-a39306223/">
+          <img src="assets/img/linkedin.svg" alt="linkedin.svg">
+        </a>
+        <a target="_blank" href="https://github.com/FlorianRehm1337">
+          <img src="assets/img/github.svg" alt="github.svg">
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
+<img (click)="toggleNav()" class="resp-menu" src="assets/img/resp_menu.svg" alt="resp-menu.svg">
