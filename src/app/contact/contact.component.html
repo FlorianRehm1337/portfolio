@@ -1,41 +1,41 @@
 <section>
-  <h1>Contact</h1>
+  <h1 translate>Contact</h1>
   <div class="form-wrapper">
 
     <form (ngSubmit)="onSubmit(formContact)" [formGroup]="contactForm" #formContact="ngForm">
-      <h4>
-        <font>Contact</font> Form
+      <h4 translate>
+        <font translate>Contact</font> Form
       </h4>
       <div class="input-wrapper">
-        <input formControlName="name" placeholder="Please enter your name" type="text">
+        <input formControlName="name" placeholder="{{'Please enter your name' | translate}}" type="text">
         <ng-container *ngIf="!nameValid">
-          <p class="error">Please enter a name!</p>
+          <p class="error" translate>Please enter a name!</p>
         </ng-container>
       </div>
       <div class="input-wrapper">
-        <input formControlName="email" placeholder="Please enter your email" type="email">
+        <input formControlName="email" placeholder="{{'Please enter your email' | translate}}" type="email">
         <ng-container *ngIf="!emailValid">
-          <p class="error">Please enter a valid email address!</p>
+          <p class="error" translate>Please enter a valid email address!</p>
         </ng-container>
       </div>
       <div class="input-wrapper">
-        <textarea formControlName="message" placeholder="Please enter your message" cols="30" rows="4"></textarea>
+        <textarea formControlName="message" placeholder="{{'Please enter your message' | translate}}" cols="30" rows="4"></textarea>
         <ng-container *ngIf="!messageValid">
-          <p class="error">Please enter a message with atleast 10 characters!</p>
+          <p class="error" translate>Please enter a message with atleast 10 characters!</p>
         </ng-container>
       </div>
 
-      <button [disabled]="emailSent" type="submit">send message</button>
+      <button [disabled]="emailSent" type="submit" translate>send message</button>
     </form>
     <div class="info-wrapper">
-      <h4>
-        <font>Get</font> in Touch
+      <h4 translate>
+        <font translate>Get</font> in Touch
       </h4>
       <div class="contact-info">
         <img src="assets/img/location.png" alt="location.svg">
         <div>
-          <p>Address</p>
-          <span>Germany, Munich</span>
+          <p translate>Address</p>
+          <span translate>Germany, Munich</span>
         </div>
       </div>
       <div class="contact-info">
@@ -48,7 +48,7 @@
       <div class="contact-info">
         <img src="assets/img/phone.png" alt="phone.svg">
         <div>
-          <p>Phone</p>
+          <p translate>Phone</p>
           <span>+49 1590 1027652</span>
         </div>
       </div>
@@ -56,8 +56,8 @@
   </div>
   <div *ngIf="emailSent" class="email-wrapper">
     <div class="email-feedback">
-      <h1>Email was sent successfully!</h1>
-      <p>I will send you an answer as soon as possible</p>
+      <h1 translate>Email was sent successfully!</h1>
+      <p translate>I will send you an answer as soon as possible</p>
       <img src="assets/img/email_feedback.png" alt="smiley.png">
     </div>
   </div>

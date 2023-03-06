@@ -1,10 +1,12 @@
 import { animate, keyframes, state, style, transition, trigger, useAnimation } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
+  providers: [],
   animations: [
     trigger('sideMenu', [
       state('in', style({
@@ -20,8 +22,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
   menuState: string = 'out';
+  menuHidden: boolean = true;
+  language: string = '';
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -34,6 +38,8 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.language = localStorage.getItem('lang') || 'en';
+    this.translate.use(this.language);
     let canvas = document.querySelectorAll('canvas');
     canvas.forEach(el => {
       el.style.display = 'none';
@@ -41,6 +47,11 @@ export class MenuComponent implements OnInit {
 
     if (innerWidth >= 900) {
       this.menuState = 'in';
+      this.menuHidden = false;
+    } else {
+      setTimeout(() => {
+        this.menuHidden = false;
+      }, 1000)
     }
   }
 
@@ -49,6 +60,12 @@ export class MenuComponent implements OnInit {
       this.menuState = this.menuState === 'out' ? 'in' : 'out';
     }
 
+  }
+
+  handleLanguage(choosenLanguage:string) {
+    this.language = choosenLanguage;
+    localStorage.setItem('lang', choosenLanguage);
+    this.translate.use(choosenLanguage);
   }
 
 }

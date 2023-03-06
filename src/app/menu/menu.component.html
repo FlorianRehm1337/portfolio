@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-  <nav [@sideMenu]="menuState">
+  <nav *ngIf="!menuHidden" [@sideMenu]="menuState">
     <img class="logo" src="assets/img/favicon_green.png" alt="logo.png">
     <img (click)="toggleNav()" class="close-menu" src="assets/img/close_menu.svg" alt="close_menu.svg">
     <div>
@@ -9,15 +9,19 @@
       <p class="my-name">Florian Rehm</p>
     </div>
     <div class="nav-links">
-      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/home">Home</a>
-      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/about">About</a>
-      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/projects">Projects</a>
-      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/contact">Contact</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/home" translate>Home</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/about" translate>About</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/projects" translate>Projects</a>
+      <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/contact" translate>Contact</a>
     </div>
     <div class="bottom-links">
       <div class="imprint-data-wrapper">
-        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/imprint">Imprint</a>
-        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/data-protection">Data-Protection</a>
+        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/imprint" translate>Imprint</a>
+        <a (click)="toggleNav()" routerLinkActive="hightlighted-link" routerLink="/data-protection" translate>Data-Protection</a>
+      </div>
+      <div class="translation-links">
+        <a [class.active-lang]="language === 'de'" (click)="handleLanguage('de')">DE</a>|
+        <a [class.active-lang]="language === 'en'" (click)="handleLanguage('en')">EN</a>
       </div>
       <div class="social-wrapper">
         <a target="_blank" href="https://www.xing.com/profile/Florian_Rehm22/cv">

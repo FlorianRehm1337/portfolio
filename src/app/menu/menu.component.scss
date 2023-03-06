@@ -17,6 +17,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+
 }
 
 .nav-links {
@@ -70,6 +71,21 @@ nav {
   color: var(--green);
   margin-top: 12px;
   text-shadow: 3px 3px black;
+}
+
+.translation-links{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  a{
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.active-lang{
+  color: var(--green) !important;
 }
 
 .imprint-data-wrapper {
@@ -171,7 +187,7 @@ nav {
     height: 42px;
   }
 }
-
+/*
 @keyframes zoomIn{
   from{
     scale: 0.0;
@@ -179,4 +195,4 @@ nav {
   to{
     scale: 1.0;
   }
-}
+} */

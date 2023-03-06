@@ -15,14 +15,18 @@ export class HomeComponent implements OnInit {
     canvas.forEach(el => {
       el.style.display = 'none';
 
-
+      
     })
+
+
     new (TypeIt as any)("#typing-headline", {
-      strings: ["Welcome to my site,", "I am glad you are here."],
+      //strings: ["Welcome to my site,", "I am glad you are here."],
       speed: 50,
       waitUntilVisible: true,
     })
       .go();
+
+
   }
 }
 

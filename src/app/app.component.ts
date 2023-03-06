@@ -1,26 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import gsap from 'gsap';
-import {
-  PlaneGeometry,
-  BufferAttribute,
-  Raycaster,
-  Scene,
-  PerspectiveCamera,
-  WebGLRenderer,
-  MeshPhongMaterial,
-  DoubleSide,
-  FlatShading,
-  Mesh,
-  DirectionalLight,
-  BufferGeometry,
-  PointsMaterial,
-  Float32BufferAttribute,
-  Points
-} from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import * as dat from 'dat.gui';
 import { Router } from '@angular/router';
+import { TranslateService } from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-root',
@@ -31,7 +12,9 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit{
   title = 'my portfolio';
 
-  constructor(public router: Router){}
+  constructor(public router: Router, private translate: TranslateService){
+    translate.setDefaultLang('en');
+  }
 
   ngOnInit(): void {
 
