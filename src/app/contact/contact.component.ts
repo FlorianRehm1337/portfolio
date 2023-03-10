@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   post = {
-    endPoint: 'https://florian-rehm.developerakademie.com/send_mail.php',
+    endPoint: 'https://florian-rehm.com/send_mail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,16 +46,12 @@ export class ContactComponent implements OnInit {
         .post(this.post.endPoint, data)
         .subscribe({
           next: (response) => {
-            console.log(data);
             ngForm.resetForm()
             this.emailSent = true;
             this.timeOutSendMail();
           },
           error: (error) => {
-            console.error(error);
           },
-
-          complete: () => console.info('send post complete'),
         });
     } else {
       this.throwErrors()

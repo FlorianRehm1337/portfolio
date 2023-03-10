@@ -1,26 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit{
+export class ProjectsComponent implements OnInit {
 
+  windowInnerWidth = window.innerWidth;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  /* redirectToPage(page:string, id:string){
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.windowInnerWidth = event.target.innerWidth;
+  }
 
-    if (page){
-
+  redirectToPage(page: string, event: any) {
+    if (event.pointerType == 'mouse' && this.windowInnerWidth > 900) {
+      window.open(page, '_blank').focus();
     }
-   // location.href = page;
-  } */
-  redirectToPage(page:string){
+  }
+
+  redirectToPageMobile(page: string) {
     window.open(page, '_blank').focus();
-   // location.href = page;
   }
 }

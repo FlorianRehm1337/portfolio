@@ -7,19 +7,19 @@
         <font translate>Contact</font> Form
       </h4>
       <div class="input-wrapper">
-        <input formControlName="name" placeholder="{{'Please enter your name' | translate}}" type="text">
+        <input formControlName="name" name="name" placeholder="{{'Please enter your name' | translate}}" type="text">
         <ng-container *ngIf="!nameValid">
           <p class="error" translate>Please enter a name!</p>
         </ng-container>
       </div>
       <div class="input-wrapper">
-        <input formControlName="email" placeholder="{{'Please enter your email' | translate}}" type="email">
+        <input formControlName="email" name="email" placeholder="{{'Please enter your email' | translate}}" type="email">
         <ng-container *ngIf="!emailValid">
           <p class="error" translate>Please enter a valid email address!</p>
         </ng-container>
       </div>
       <div class="input-wrapper">
-        <textarea formControlName="message" placeholder="{{'Please enter your message' | translate}}" cols="30" rows="4"></textarea>
+        <textarea formControlName="message" name="message" placeholder="{{'Please enter your message' | translate}}" cols="30" rows="4"></textarea>
         <ng-container *ngIf="!messageValid">
           <p class="error" translate>Please enter a message with atleast 10 characters!</p>
         </ng-container>
