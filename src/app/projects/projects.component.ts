@@ -18,8 +18,8 @@ export class ProjectsComponent implements OnInit {
     this.windowInnerWidth = event.target.innerWidth;
   }
 
-  redirectToPage(page: string, event: any) {
-    if (event.pointerType == 'mouse' && this.windowInnerWidth > 900) {
+  redirectToPage(page: string) {
+    if (this.windowInnerWidth > 900) {
       window.open(page, '_blank').focus();
     }
   }
